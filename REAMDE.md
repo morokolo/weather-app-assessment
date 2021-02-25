@@ -11,13 +11,16 @@ This  a weather application to display the current weather at the user’s locat
 - Location Based Weather feeds
 - [Extra] - Pull to refresh
 - [Extra] - Display hourly data
-- [Extra] - The ability to access offline data
+- [Extra] -Blur Background images to enhance UI
 
 ## Operating System
 The application runs on the following devices
 - Android
 - iOS
 
+| iOS  (Simulator)                                      | Android (actual device)                               |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| <img src="./assets/iOS.png" width="300" height="600"> | <img src="./assets/AND.jpg" width="300" height="600"> |
 
 ## Tech
 

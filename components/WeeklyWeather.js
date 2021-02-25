@@ -54,7 +54,11 @@ export default function WeeklyWeather({ forecast }) {
             <View style={styles.weekListContainerItem}>
               <Image
                 style={styles.smallIcon}
-                source={iconDictionary[weather.icon] || iconDictionary["01d"]}
+                source={
+                  iconDictionary[weather.icon] || {
+                    uri: `http://openweathermap.org/img/wn/${weather.icon}@4x.png`,
+                  }
+                }
               />
             </View>
             <View style={styles.weekListContainerItem}>

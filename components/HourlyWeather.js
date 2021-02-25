@@ -1,5 +1,12 @@
 import React from "react";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  Image,
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import colors from "../constants/colors";
 import iconDictionary from "../utils/iconDictionary";
 
@@ -23,7 +30,11 @@ export default function HourlyWeather({ forecast }) {
               </Text>
               <Image
                 style={styles.smallIcon}
-                source={iconDictionary[weather.icon] || iconDictionary["01d"]}
+                source={
+                  iconDictionary[weather.icon] || {
+                    uri: `http://openweathermap.org/img/wn/${weather.icon}@4x.png`,
+                  }
+                }
               />
               <Text>{weather.description}</Text>
             </View>
@@ -46,6 +57,7 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   hour: {
+    height: 140,
     padding: 6,
     alignItems: "center",
     backgroundColor: "#57575da6",
@@ -53,6 +65,6 @@ const styles = StyleSheet.create({
   smallIcon: {
     width: 30,
     height: 30,
-    marginBottom: 35,
+    marginBottom: Platform.OS === "android" ? 0 : 30,
   },
 });

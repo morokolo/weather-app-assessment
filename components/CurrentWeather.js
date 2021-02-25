@@ -8,26 +8,24 @@ import HourlyWeather from "./HourlyWeather";
 export default function CurrentWeather({ forecast, current }) {
   return (
     <ImageBackground
-      blurRadius={2}
+      blurRadius={2} // added this to make the information more prominent over the background image
       resizeMode="contain"
       style={{
         flex: 1,
       }}
       source={bgImageDictionary[current.icon]}
     >
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <View style={styles.currentContainer}>
         <Text style={styles.currentTemp} testID="text">
           {Math.round(forecast.current.temp)}°
         </Text>
         <Image
           style={styles.temperatureIndicatorIcon}
-          source={iconDictionary[current.icon] || iconDictionary["01d"]}
+          source={
+            iconDictionary[current.icon] || {
+              uri: `http://openweathermap.org/img/wn/${current.icon}@4x.png`,
+            }
+          }
         />
         <Text style={styles.currentDescription}>{current.description}</Text>
       </View>
@@ -51,7 +49,11 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     color: colors.white,
   },
-
+  currentContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   temperatureIndicatorIcon: {
     width: 40,
     height: 40,

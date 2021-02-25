@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   scrollViewContent: {
     flex: 1,
     flexDirection: "column",
-    marginTop: -25,
+    marginTop: Platform.OS === "android" ? 0 : -25,
   },
   weatherSectionContainer: {
     flex: 1,

@@ -6,11 +6,12 @@ import {
   StatusBar,
   StyleSheet,
 } from "react-native";
+import colors from "../constants/colors";
 
 export default function Loader() {
   return (
     <SafeAreaView style={styles.loading}>
-      <ActivityIndicator size="large" color="#fc5c65" />
+      <ActivityIndicator size="large" />
     </SafeAreaView>
   );
 }
@@ -18,7 +19,7 @@ export default function Loader() {
 const styles = StyleSheet.create({
   loading: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: colors.white,
     alignItems: "center",
     justifyContent: "center",
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,

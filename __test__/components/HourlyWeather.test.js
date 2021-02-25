@@ -1,6 +1,6 @@
 import "react-native";
 import React from "react";
-import WeeklyWeather from "../../components/WeeklyWeather";
+import HourlyWeather from "../../components/HourlyWeather";
 import renderer from "react-test-renderer";
 
 import { configure, shallow } from "enzyme";
@@ -8,7 +8,7 @@ import Adapter from "enzyme-adapter-react-16";
 
 configure({ adapter: new Adapter() });
 
-it("should render the WeeklyWeather component with  send props", () => {
+it("should render the HourlyWeather component with   props", () => {
   let forecast = {
     current: {
       dt: 1614065857,
@@ -71,6 +71,6 @@ it("should render the WeeklyWeather component with  send props", () => {
     ],
   };
 
-  const tree = renderer.create(<WeeklyWeather forecast={forecast} />).toJSON();
+  const tree = renderer.create(<HourlyWeather forecast={forecast} />).toJSON();
   expect(tree).toMatchSnapshot();
 });

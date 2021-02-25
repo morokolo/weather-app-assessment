@@ -1,9 +1,201 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the WeeklyWeather functional component 1`] = `
+exports[`should render the WeeklyWeather component with  send props 1`] = `
 <View>
-  <Text>
-    WeeklyWeather
-  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 60,
+          "flexDirection": "row",
+          "padding": 15,
+          "paddingBottom": 0,
+        },
+        Object {
+          "borderBottomColor": "#fff",
+          "borderBottomWidth": 1,
+          "flexBasis": 70,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+          }
+        }
+      >
+        10.05
+        °
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+          }
+        }
+      >
+        min
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {
+              "alignSelf": "center",
+            },
+          ]
+        }
+      >
+        12.58
+        °
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {
+              "alignSelf": "center",
+            },
+          ]
+        }
+      >
+        Current
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {
+              "alignSelf": "center",
+            },
+          ]
+        }
+      >
+        16.96
+        °
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {
+              "alignSelf": "center",
+            },
+          ]
+        }
+      >
+        max
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexBasis": 60,
+          "flexDirection": "row",
+          "padding": 15,
+          "paddingBottom": 0,
+        },
+        Object {
+          "backgroundColor": undefined,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#fff",
+          }
+        }
+      >
+        Monday
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "alignSelf": "center",
+            "height": 30,
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "alignSelf": "center",
+              "fontSize": 20,
+              "marginLeft": 12,
+            },
+            Object {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        17
+        °
+      </Text>
+    </View>
+  </View>
 </View>
 `;
